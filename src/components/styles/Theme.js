@@ -12,6 +12,9 @@ const Theme = createTheme({
         info: {
           main: '#21dbf3',
         },
+        backgroundColor: {
+          main: '#21dbf3'
+        }
       },
       overrides: {
         MuiAppBar: {
