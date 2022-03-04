@@ -5,9 +5,13 @@ import Section from "./Section";
 import About from './About';
 import { makeStyles } from "@mui/styles";
 import Experience from "./Experience";
+import Contact from "./Contact";
+import Timeline from "./Timeline";
+import Footer from "./Footer"
 
-const useStyles = makeStyles((Theme)=> ({
+const useStyles = makeStyles((theme)=> ({
     app:{
+        
 
     }
 }))
@@ -21,29 +25,30 @@ export default function Home() {
             <Container>
                 <Navbar />
                 <Section
-                    title="About"
+                    title="About Me "
                     subtitle={<About />}
-                    dark={false}
+                    dark={1}
                     id="About"
                 ></Section>
                 <Section
-                    title="Experience"
+                    title="My Experience"
                     subtitle={<Experience />}
-                    dark={true}
+                    dark={2}
                     id="Experience"
                 ></Section>
                 <Section
-                    title="TimeLine"
-                    subtitle={<About />}
-                    dark={false}
+                    title="My Roadmap"
+                    subtitle={<Timeline />}
+                    dark={3}
                     id="TimeLine"
                 ></Section>
                 <Section
-                    title="Contact"
-                    subtitle={<About />}
-                    dark={true}
+                    title="Contact me"
+                    subtitle={<Contact />}
+                    dark={4}
                     id="Contact"
                 ></Section>
+                <Footer/>
             </Container>
         </div>
 

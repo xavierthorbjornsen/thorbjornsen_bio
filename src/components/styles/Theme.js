@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-const Theme = createTheme({
+const theme = createTheme({
     palette: {
         type: 'light',
         primary: {
@@ -15,11 +15,12 @@ const Theme = createTheme({
         backgroundColor: {
           main: '#21dbf3'
         }
+
       },
       overrides: {
         MuiAppBar: {
           colorInherit: {
-            backgroundColor: '#689f38',
+            backgroundColor: '#6A995C',
             color: '#fff',
           },
         },
@@ -27,5 +28,5 @@ const Theme = createTheme({
 
 })
 
-export default Theme; 
+export default theme; 
 

@@ -3,28 +3,28 @@ import { Button } from "@mui/material";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles((Theme) => ({
+const useStyles = makeStyles((theme) => ({
   nav: {
-    backgroundColor: '#fafafa',
+    backgroundColor: '#001B29',
     position: 'sticky',
     top: 0,
     width: '100%',
-    height: 80,
+    height: theme.spacing(10),
     zIndex: 1000,
-    boxShadow: '0 4 14 0 rgba(0,0,0,0.15)',
+    boxShadow: '0px 4px 14px 0px rgba(0,0,0,0.15)',
+    
   },
   navContent: {
-    maxWidth: '900px',
-    padding: '0rem 3rem',
-    margin: 'auto',
+    maxWidth: '1000px',
+    padding: theme.spacing('0rem', '3rem'),
+    margin: theme.spacing(0, 'auto'),
     display: 'flex',
     justifyContent: "space-between",
     alignItems: "center",
     height: '100%',
+    color:"white",
   },
   navHome: {
-    height: '60px',
-    width: '60px',
   },
   navItems: {
   },
@@ -47,17 +47,16 @@ export default function Navbar() {
     <nav className={classes.nav} id="navbar">
       <div className={classes.navContent}>
         <Button
-          variant="outline"
+          variant="outlined"
           className={classes.navHome}
           onClick={scrollToTop}>Home
         </Button>
         <ul className={classes.navItems}>
           {pages.map((page) => (
-            <li className={classes.navItem}>
-              <Button>
+            <li className={classes.navItem} key={page}>
+              <Button variant="outlined" >
                 <Link
                   activeClass="active"
-                  key={page}
                   to={page}
                   spy={true}
                   smooth={true}

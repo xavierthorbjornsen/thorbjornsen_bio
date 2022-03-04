@@ -1,15 +1,68 @@
+import { Card, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import React from "react";
-import { Button } from "@mui/material";
+import { 
+    DiGit,
+    DiReact,
+    DiPython, 
+    DiDotnet, 
+    DiFirebase, 
+    DiRasberryPi,
+    DiGithubBadge,
+    DiVisualstudio,} from 'react-icons/di';
+import { SiSolidity, SiArduino, SiVisualstudiocode, SiMysql, SiCsharp } from 'react-icons/si';
 
 
-const About = () => {
+
+const useStyles = makeStyles((theme) => ({
+    sectionRoot: {
+        opacity: 0.9,
+    }
+}))
 
 
-    return(
-        <div>
-            <Button variant="outlined"></Button>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+
+export default function About() {
+    const classes = useStyles();
+
+
+    return (
+        <div className={classes.sectionRoot}>
+            <Card elevation={3} sx={{ height: 'auto', width: 270, p: 2, mt:2, display: "flex-grow", }}>
+                <Typography variant="body1" >Hi, I am Xavier and I enjoy open-source developement <br />
+                    I have been developing in these languages for a while now.
+                    <ul>
+                        <li ><DiPython size={30} color={"black"} /> Python</li>
+                        <li > <DiDotnet size={30} color={"Blue"} /> Dotnet</li>
+                        <li ><DiReact size={30} color={"#40e0d0"} /> React</li>
+                        <li ><SiCsharp size={30}  /> C Sharp</li>
+                        <li ><SiSolidity size={30} /> Solidity</li>
+                    </ul>
+                </Typography>
+            </Card>
+            <Card elevation={3} sx={{ height: 'auto',  width: 270, p: 2, mt:2, display: "flex-grow", }}>
+                <Typography variant="body1" >I have used these plaforms for various projects<br />
+                    <ul>
+                        <li > <SiVisualstudiocode size={28} color={"#2196f3"} /> Visual Studio Code</li>
+                        <li ><DiGit size={30} /> Git</li>
+                        <li ><DiGithubBadge size={30} /> Github</li>
+                        <li ><DiRasberryPi size={30} color={"Darkred"}/> RaspberryPi</li>
+                        <li > <DiFirebase size={30} color={"#ff9800"}/> FireBase </li>
+                        <li ><SiArduino size={30} color={"#40e0d0"}/> Arduino </li>
+                    </ul></Typography>
+            </Card>
+            <Card elevation={3} sx={{ height: 'auto', width: 270, p: 2, mt:2, display: "flex-grow", }}>
+                <Typography variant="body1" > I am familiar with these platforms and languages<br />
+                    <ul>
+                        <li><DiVisualstudio size={30} color={"#AB345A"} /> Visual Studio</li>
+                        <li><SiMysql size={30} /> My SQL</li>
+                    </ul>
+                </Typography>
+            </Card>
+            <Card elevation={3}  sx={{ width: 800, p: 2, mt:2, display: "flex-grow", }}>
+                <Typography variant="body1" > I have  </Typography>
+            </Card>
+
         </div>
     )
 };
-export default About; 

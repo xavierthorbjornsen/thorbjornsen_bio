@@ -8,6 +8,7 @@ function Footer() {
         sx={{
             position: "aboslute",
             bottom:"auto",
+            background: "#003652"
 
         }}>
             Footer
