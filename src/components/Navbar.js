@@ -2,6 +2,8 @@ import React from "react";
 import { Button } from "@mui/material";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { makeStyles } from "@mui/styles";
+import Avatar from '@mui/material/Avatar';
+import avatarXavier from './static/images/avatarXavier.jpg';
 
 const useStyles = makeStyles((theme) => ({
   nav: {
@@ -12,17 +14,20 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(10),
     zIndex: 1000,
     boxShadow: '0px 4px 14px 0px rgba(0,0,0,0.15)',
+
     
   },
   navContent: {
-    maxWidth: '1000px',
-    padding: theme.spacing('0rem', '3rem'),
-    margin: theme.spacing(0, 'auto'),
+    maxWidth:'1400px',
+    paddingLeft:8,
+    paddingRight: 8,
+    margin: 0,
     display: 'flex',
     justifyContent: "space-between",
     alignItems: "center",
     height: '100%',
     color:"white",
+    zIndex: 1,
   },
   navHome: {
   },
@@ -30,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
   },
   navItem: {
     display: "inline",
-    marginLeft: '2rem',
-    color: '#333',
+    marginLeft: theme.spacing(1),
+    color:'#333',
   }
 
 }))
@@ -66,9 +71,12 @@ export default function Navbar() {
                   {page}
                 </Link>
               </Button>
+              
             </li>
           ))}
+           <Avatar alt="X" src={avatarXavier} sx={{float:"right", ml:2, }}/>
         </ul>
+
       </div>
     </nav>
   );

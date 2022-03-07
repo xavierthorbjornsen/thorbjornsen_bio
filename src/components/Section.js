@@ -17,16 +17,20 @@ const useStyles = makeStyles((theme) => ({
         color:"white",
     },
     sectionContent: {
-        maxWidth: 'auto',
-        margin: 0,
-        padding: 20,    
+        height:'100vh',
+        maxWidth:'1400px',
+        padding: 0,
+        margin: theme.spacing(0, 'auto'),
+        display: 'block',
+        justifyContent: "left",
+        alignItems: "center",
     },
     sectionExperience: {
-        background: '#333',
+        background: '#0063B0',
         color: "white",
         backgroundImage: `url(${plane})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'auto',
+        backgroundSize: 'cover',
 
     },
     sectionTimeLine: {
@@ -35,8 +39,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `url(${sea})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-
-
     },
     sectionContact: {
         background: '#333',
@@ -68,8 +70,8 @@ export default function Section({title, subtitle, dark, id}) {
     return (
         <div className={isDark(dark)}>
             <div className={classes.sectionContent} id={id}>
-                <Typography component={'div'} variant="h3" >{title}</Typography>
-                <Typography component={'div'} variant="body1">{subtitle}</Typography>
+                <Typography component={'div'} variant="h3" sx={{ paddingLeft: 6, pt:2, pb:2}} >{title}</Typography>
+                <Typography component={'div'} variant="body1" sx={{ paddingLeft: 6,}} >{subtitle}</Typography>
             </div>
         </div>
     )

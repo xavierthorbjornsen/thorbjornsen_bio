@@ -1,20 +1,39 @@
-import { Container } from "@mui/material";
+
+import { Container,Typography } from "@mui/material/";
+import { makeStyles } from "@mui/styles";
 import React from "react";
 
+
+const useStyles = makeStyles((theme) => ({
+
+    footer: {
+        backgroundColor: '#001B29',
+
+    }
+
+}))
+
+
 function Footer() {
-  return (
+    const classes = useStyles();
+    return (
 
-        <Container 
-        sx={{
-            position: "aboslute",
-            bottom:"auto",
-            background: "#003652"
+        <div className={classes.footer}>
+            <Container
+                sx={{
+                    position: "aboslute",
+                    bottom: "auto",
+                    background: "#001B29",
+                    
 
-        }}>
-            Footer
-        </Container>
+                }}>
+                <Typography variant="h6" color={'whitesmoke'} >@CopyRight images</Typography>
+            </Container>
 
-  );
+        </div>
+
+
+    );
 }
 
 export default Footer;
