@@ -19,9 +19,9 @@ const useStyles = makeStyles((theme) => ({
   },
   navContent: {
     maxWidth:'1400px',
-    paddingLeft:8,
-    paddingRight: 8,
-    margin: 0,
+    margin: 'auto',
+    paddingLeft:30,
+    paddingRight:30,
     display: 'flex',
     justifyContent: "space-between",
     alignItems: "center",

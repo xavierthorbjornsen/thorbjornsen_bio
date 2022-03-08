@@ -70,8 +70,8 @@ export default function Section({title, subtitle, dark, id}) {
     return (
         <div className={isDark(dark)}>
             <div className={classes.sectionContent} id={id}>
-                <Typography component={'div'} variant="h3" sx={{ paddingLeft: 6, pt:2, pb:2}} >{title}</Typography>
-                <Typography component={'div'} variant="body1" sx={{ paddingLeft: 6,}} >{subtitle}</Typography>
+                <Typography component={'div'} variant="h3" sx={{ paddingLeft: 4, pt:2, pb:2}} >{title}</Typography>
+                <Typography component={'div'} variant="body1" sx={{ paddingLeft: 4,}} >{subtitle}</Typography>
             </div>
         </div>
     )

@@ -11,7 +11,6 @@ import Footer from "./Footer";
 
 const useStyles = makeStyles({
     app: {
-        padding: 0,
         backgroundColor: "#001B29"
     },
     nav: {

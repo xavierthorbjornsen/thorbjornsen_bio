@@ -52,7 +52,7 @@ export default function TimeLine() {
                 </TimelineItem>
                 <TimelineItem>
                     <TimelineOppositeContent color="black">
-                    Chief Techincal Officer - ARRQ 
+                    Chief Technical Officer - ARRQ 
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineDot />
