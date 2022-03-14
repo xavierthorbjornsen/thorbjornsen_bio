@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { makeStyles } from "@mui/styles";
 import Avatar from '@mui/material/Avatar';
-import avatarXavier from './static/images/avatarXavier.jpg';
+import avatarXavier from '../static/images/avatarXavier.jpg';
 
 const useStyles = makeStyles((theme) => ({
   nav: {

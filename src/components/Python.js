@@ -1,6 +1,6 @@
 import { Paper } from "@mui/material";
 import React from "react";
-import python from "./static/images/python.png";
+import python from "../static/images/python.png";
 
 export default function Python() {
     return (
