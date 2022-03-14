@@ -1,10 +1,10 @@
 import { Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
-import moon from "./static/images/moon.jpg";
-import plane from "./static/images/plane.jpg";
-import sea from "./static/images/sea.jpg";
-import lightning from "./static/images/lightning.jpg"
+import moon from "../static/images/moon.jpg";
+import plane from "../static/images/plane.jpg";
+import sea from "../static/images/sea.jpg";
+import lightning from "../static/images/lightning.jpg";
 
 
 const useStyles = makeStyles((theme) => ({

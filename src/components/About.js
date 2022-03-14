@@ -30,7 +30,7 @@ export default function About() {
         <div className={classes.sectionRoot}>
             <Card elevation={3} sx={{ height: 'auto', width: 270, p: 2, mt:2, display: "flex-grow", }}>
                 <Typography variant="body1" >Hi, my name is Xavier and I enjoy open-source developement <br />
-                    I have been developing in these languages for a while now.
+                    I have been developing in these languages for a while now.</Typography>
                     <ul>
                         <li ><DiPython size={30} color={"black"} /> Python</li>
                         <li ><DiDotnet size={30} color={"Blue"} /> Dotnet</li>
@@ -38,10 +38,10 @@ export default function About() {
                         <li ><SiCsharp size={30}  /> C Sharp</li>
                         <li ><SiSolidity size={30} /> Solidity</li>
                     </ul>
-                </Typography>
+                
             </Card>
             <Card elevation={3} sx={{ height: 'auto',  width: 270, p: 2, mt:2, display: "flex-grow", }}>
-                <Typography variant="body1" >I have used these plaforms for various projects<br />
+                <Typography variant="body1" >I have used these plaforms for various projects</Typography>
                     <ul>
                         <li > <SiVisualstudiocode size={28} color={"#2196f3"} /> Visual Studio Code</li>
                         <li ><DiGit size={30} /> Git</li>
@@ -49,15 +49,15 @@ export default function About() {
                         <li ><DiRasberryPi size={30} color={"Darkred"}/> RaspberryPi</li>
                         <li > <DiFirebase size={30} color={"#ff9800"}/> FireBase </li>
                         <li ><SiArduino size={30} color={"#40e0d0"}/> Arduino </li>
-                    </ul></Typography>
+                    </ul>
             </Card>
             <Card elevation={3} sx={{ height: 'auto', width: 270, p: 2, mt:2, display: "flex-grow", }}>
-                <Typography variant="body1" > I am familiar with these platforms and languages<br />
+                <Typography  variant="body1" > I am familiar with these platforms and languages</Typography>
                     <ul>
                         <li><DiVisualstudio size={30} color={"#AB345A"} /> Visual Studio</li>
                         <li><SiMysql size={30} /> My SQL</li>
                     </ul>
-                </Typography>
+                
             </Card>
         </div>
     )

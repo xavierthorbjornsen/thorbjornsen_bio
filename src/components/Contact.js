@@ -1,56 +1,120 @@
-
+import { TextField, Button, Stack, Card} from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import axios from "axios";
 import React, { useState } from "react";
+import { useForm, Controller } from "react-hook-form";
+
 
 const useStyles = makeStyles((theme) => ({
-    sectionContact: {
-        opacity: 0.8,
+    sectionContact: {   
+    },
+    contactForm: {
+        display: 'flex',
+        alignItems: 'left',
+        justifyContent: 'space-between',
     }
 }))
 
 
 export default function Contact() {
     const [status, setStatus] = useState("Submit");
+    const [firstname, setName ] = useState("");
+    const [email, setEmail ] = useState("");
+    const [message, setMessage ] = useState("");
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setStatus("Sending...");
-        const { name, email, message } = e.target.elements;
-        let details = {
-          name: name.value,
-          email: email.value,
-          message: message.value,
+    const { control, handleSubmit } = useForm({
+        defaultValues: {
+            name: '',
+            email: '',
+            message: '',
+        }
+    });
+
+    const onSubmit = async () => {
+        setStatus("sending ...");
+        var postData = {
+            name: firstname,
+            email: email,
+            message: message,
         };
-        let response = await fetch("http://localhost:5000/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json;charset=utf-8",
-          },
-          body: JSON.stringify(details),
-        });
+        console.log(postData);
+        let axiosConfig = {
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+                "Access-Control-Allow-Origin": "*",
+            }
+        };
+
+        axios.post('https://us-central1-thorbjornsen-80cea.cloudfunctions.net/emailMessage', JSON.stringify(postData), axiosConfig)
+            .catch((err) => {
+                console.log("AXIOS ERROR: ", err);
+            })
+
         setStatus("Submit");
-        let result = await response.json();
-        alert(result.status);
+        setEmail('');
+        setName('');
+        setMessage('');
     };
     const classes = useStyles();
 
     return (
         <div className={classes.sectionContact}>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" required />
+            <Card sx={{ width: 300, opacity:0.7, p:2}}>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <div className={classes.contactForm}>
+                    <Stack
+                        sx={{
+                            width: '35ch',
+                        }}
+
+                        spacing={2}
+                    >
+                        <Controller
+                            name="firstName"
+                            control={control}
+                            render={({ field }) => <TextField
+                                {...field}
+                                type="input"
+                                id="firstname"
+                                value={firstname}
+                                label="Name"
+                                required
+                                onChange={(e => setName(e.target.value))}
+                            />}
+                        />
+                        <Controller
+                            name="firstName"
+                            control={control}
+                            render={({ field }) => <TextField
+                                {...field}
+                                type="input"
+                                id="email"
+                                required
+                                value={email}
+                                label="Email"
+                                onChange={(e => setEmail(e.target.value))}
+                            />}
+                        />
+                        <Controller
+                            name="firstName"
+                            control={control}
+                            render={({ field }) => <TextField
+                                {...field}
+                                type="input"
+                                id="message"
+                                label="Message"
+                                multiline
+                                rows={4}
+                                required
+                                value={message}
+                                onChange={(e => setMessage(e.target.value))}
+                            />}
+                        />
+                        <Button type="submit" variant="outlined">{status}</Button>
+                    </Stack>
                 </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" required />
-                </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea id="message" required />
-                </div>
-                <button type="submit">{status}</button>
             </form>
+            </Card>
 
         </div>
     )
