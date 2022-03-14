@@ -25,9 +25,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# functions
-
-functions/serviceAccountKey.json
-functions/.runtimeconfig.json
-functions/package-lock.json
-functions/node_modules
