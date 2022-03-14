@@ -8,6 +8,8 @@ const useStyles = makeStyles((theme) => ({
 
     footer: {
         backgroundColor: '#001B29',
+        bottom: 0,
+        minWidth:'322px',
 
     }
 

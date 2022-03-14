@@ -8,7 +8,6 @@ import lightning from "../static/images/lightning.jpg";
 import { useMediaQuery } from 'react-responsive';
 
 
-
 const useStyles = makeStyles((theme) => ({
 
     sectionAbout: {     
@@ -17,6 +16,8 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         color:"white",
+        minHeight: '750px',
+        minWidth:'322px',
     },
     sectionContent: {
         height:'100vh',
@@ -33,6 +34,8 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `url(${plane})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        minHeight: '750px',
+        minWidth:'322px',
 
     },
     sectionTimeLine: {
@@ -41,6 +44,8 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `url(${sea})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        minHeight: '750px',
+        minWidth:'322px',
     },
     sectionContact: {
         background: '#333',
@@ -48,6 +53,8 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `url(${lightning})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        minHeight: '750px',
+        minWidth:'322px',
     },
 
 

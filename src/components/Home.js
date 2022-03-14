@@ -7,7 +7,7 @@ import { makeStyles } from "@mui/styles";
 import Experience from "./Experience";
 import Contact from "./Contact";
 import Timeline from "./Timeline";
-import Footer from "./Footer";
+
 
 const useStyles = makeStyles({
     app: {
@@ -56,7 +56,6 @@ export default function Home() {
                         id="Contact"
                     ></Section>
                 </div>
-                <Footer />
             </div>
         </div>
     );

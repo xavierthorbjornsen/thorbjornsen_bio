@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(10),
     zIndex: 1000,
     boxShadow: '0px 4px 14px 0px rgba(0,0,0,0.15)',
+    minWidth:'322px',
 
     
   },
