@@ -65,7 +65,7 @@ export default function Contact() {
 
     return (
         <div className={classes.sectionContact}>
-            <Card sx={{ width: 300, opacity:0.7, p:2}}>
+            <Card sx={{ width: 300, opacity:0.8, p:2}}>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className={classes.contactForm}>
                     <Stack
@@ -91,7 +91,7 @@ export default function Contact() {
                         <Controller
                             name="firstName"
                             control={control}
-                            render={({ field }) => <TextField
+                            render={({ field }) => <TextField 
                                 {...field}
                                 type="input"
                                 id="email"
@@ -104,7 +104,7 @@ export default function Contact() {
                         <Controller
                             name="firstName"
                             control={control}
-                            render={({ field }) => <TextField
+                            render={({ field }) => <TextField 
                                 {...field}
                                 type="input"
                                 id="message"

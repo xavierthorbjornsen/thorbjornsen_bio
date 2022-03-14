@@ -64,8 +64,8 @@ export default function Navbar() {
 
   const isMonitor = useMediaQuery({ query: '(min-width: 1433px)' })
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1432px)' })
-  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
-  const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+  // const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+  // const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
 
   const pages = ["About", "Experience", "TimeLine", "Contact"];
   return (

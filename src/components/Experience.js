@@ -11,7 +11,9 @@ import { HiOutlineExternalLink } from 'react-icons/hi';
 const useStyles = makeStyles((theme) => ({
     sectionExperience: {
         opacity: 0.8,
-        maxWidth: 300,
+        maxWidth: 270,
+        marginBottom: 20,
+        
     }
 }))
 
@@ -21,15 +23,20 @@ const Experience = () => {
     return (
         <div className={classes.sectionExperience}>
             <Stack spacing={2}>
-                <Card><Typography variant="h4" sx={{ p: 2, }}/>ARRQ <GiDeliveryDrone color="#001f17" />
-                    <Typography variant="h5">Chief Techincal Officer </Typography>
-                    <Typography variant="body1">Build, design and write python scripts to automate the flight of drones. Example code below.<br /> <Link underline="none" href={url} >Python flight <HiOutlineExternalLink /></Link> </Typography>
+                <Card sx={{ height:200, }}>
+                    <Typography variant="h4" sx={{ paddingLeft: 2,  }}>ARRQ <GiDeliveryDrone color="#001f17" /></Typography>
+                    <Typography variant="h5"  sx={{ paddingLeft: 2, }}>Chief Technical Officer </Typography>
+                    <Typography variant="body1" sx={{paddingLeft: 2, }}>Build, design and write python scripts to automate the flight of drones. Example code below.<br /> <Link underline="none" href={url} >Python flight <HiOutlineExternalLink /></Link> </Typography>
                 </Card>
-                <Card><Typography variant="h4" sx={{ p: 2, }}/>NEC  <br />
-                    <Typography variant="h5">Systems Engineer <br /></Typography><Typography variant="body1"> My Role here was a full stack developer. Building applications and updating existing repositories</Typography>
+                <Card sx={{ height:200, }}>
+                    <Typography variant="h4" sx={{ paddingLeft: 2, }}>NEC </Typography>
+                    <Typography variant="h5"  sx={{paddingLeft: 2, }}>Systems Engineer <br /></Typography>
+                    <Typography variant="body1" sx={{paddingLeft: 2,  }}> My Role here was a full stack developer. Building applications and updating existing repositories</Typography>
                 </Card>
-                <Card><Typography variant="h4" sx={{ p: 2, }}>Territory Generation
-                    <br /><Typography>IT Support</Typography></Typography></Card>
+                <Card sx={{ height:200, }}>
+                    <Typography variant="h4" sx={{ paddingLeft: 2,  }}>Territory Generation</Typography>
+                    <Typography sx={{paddingLeft: 2 }}>IT Support</Typography>
+                </Card>
             </Stack>
         </div>
 
