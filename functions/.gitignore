@@ -1,3 +1,4 @@
 # /functions/.gitignore
 serviceAccountKey.json
 /node_modules
+.runtimeconfig.json

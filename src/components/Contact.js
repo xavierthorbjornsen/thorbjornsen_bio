@@ -1,8 +1,9 @@
-import { TextField, Button, Stack, Card} from "@mui/material";
+import { TextField, Button, Stack, Card, Alert} from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -21,6 +22,7 @@ export default function Contact() {
     const [firstname, setName ] = useState("");
     const [email, setEmail ] = useState("");
     const [message, setMessage ] = useState("");
+    const [alert, setAlert ] = useState(false);
 
     const { control, handleSubmit } = useForm({
         defaultValues: {
@@ -31,7 +33,7 @@ export default function Contact() {
     });
 
     const onSubmit = async () => {
-        setStatus("sending ...");
+        setStatus("Sending ...");
         var postData = {
             name: firstname,
             email: email,
@@ -54,6 +56,10 @@ export default function Contact() {
         setEmail('');
         setName('');
         setMessage('');
+        setAlert(true);
+        setTimeout(() => {
+            setAlert(false);
+        }, 2000)
     };
     const classes = useStyles();
 
@@ -114,7 +120,9 @@ export default function Contact() {
                     </Stack>
                 </div>
             </form>
+            {alert ? <Alert sx={{ mt: 2}} severity="success">Email sent. Thank you for reaching out</Alert> : <></>}
             </Card>
+           
 
         </div>
     )

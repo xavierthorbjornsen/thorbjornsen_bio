@@ -34,7 +34,7 @@ exports.emailMessage = functions.https.onRequest(async(req, res) => {
             from: req.body.email,
             subject: `from my website ${req.body.email}`,
             text: req.body.message,
-            html: `<p>${req.body.message}`
+            html: `<p>${req.body.message}</p>`
         };
 
         try {
