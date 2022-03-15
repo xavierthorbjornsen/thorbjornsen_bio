@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
     sectionContent: {
         height:'100vh',
         maxWidth:'1400px',
-        paddingBottom: 20,
         margin: theme.spacing(0, 'auto'),
         display: 'block',
         justifyContent: "left",
@@ -75,16 +74,16 @@ export default function Section({title, subtitle, dark, id}) {
             default:
         }
     }
-    const isMonitor = useMediaQuery({ query: '(min-width: 1433px)' })
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1432px)' })
+    const isMonitor = useMediaQuery({ query: '(min-width: 1042px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1043px)' })
 
     return (
         <div className={isDark(dark)}>
             <div className={classes.sectionContent} id={id}>
-            {isMonitor && <div><Typography component={'div'} variant="h3" sx={{ paddingLeft: 4, pt:2, pb:2}} >{title}</Typography>
+            {isMonitor && <div><Typography component={'div'} variant="h3"  sx={{ paddingLeft: 4, pt:2, pb:2}} >{title}</Typography>
                 <Typography component={'div'} variant="body1" sx={{ paddingLeft: 4,}} >{subtitle}</Typography></div>}
-                {isTabletOrMobile && <div><Typography component={'div'} variant="h5" sx={{ paddingLeft: 2, pt:2, pb:2}} >{title}</Typography>
-                <Typography component={'div'} variant="body1" sx={{ paddingLeft: 2,}} >{subtitle}</Typography></div>}
+                {isTabletOrMobile && <div><Typography component={'div'} variant="h5" justifyContent={"center"} sx={{ display:"flex", pt:1, pb:1}} >{title}</Typography>
+                <Typography component={'div'} variant="body1" sx={{ justifyContent:"center", display:'flex'}} >{subtitle}</Typography></div>}
             </div>
         </div>
     )

@@ -18,7 +18,7 @@ import { useMediaQuery } from 'react-responsive';
 const useStyles = makeStyles((theme) => ({
     sectionRoot: {
         opacity: 0.9,
-        height: '1121px',
+        height: '90%',
     },
 }))
 
@@ -33,7 +33,7 @@ export default function About() {
     return (
         <div className={classes.sectionRoot}>
             <Card elevation={3} sx={{ width: 270, p: 2, mt:2, display: "flex-grow", flexDirection: 'column' }}>
-                <Typography variant="body1" >Hi, my name is Xavier and I enjoy open-source developement <br />
+                <Typography variant="body1" >Hi, my name is Xavier and I enjoy open-source developement.
                     I have been developing in these languages for a while now.</Typography>
                     {isMonitor && <ul>
                         <li ><DiPython size={30} color={"black"} /> Python</li>
@@ -42,11 +42,11 @@ export default function About() {
                         <li ><SiCsharp size={30}  /> C Sharp</li>
                         <li ><SiSolidity size={30} /> Solidity</li>
                     </ul>}
-                    {isTabletOrMobile && <div ><DiPython size={30} color={"black"} /><DiDotnet size={30} color={"Blue"} /><DiReact size={30} color={"#40e0d0"} /><SiCsharp size={30}  /><SiSolidity size={30} />
+                    {isTabletOrMobile && <div ><DiPython size={30} color={"black"} /><DiDotnet size={30} color={"Blue"} /><DiReact size={30} color={"#40e0d0"} /><SiCsharp size={30} /><SiSolidity size={30} />
                     </div>}
             </Card>
             <Card elevation={3} sx={{ height: 'auto',  width: 270, p: 2, mt:2, display: "flex-grow", }}>
-                <Typography variant="body1" >I have used these plaforms for various projects</Typography>
+                <Typography variant="body1" >I have used these plaforms for various projects.</Typography>
                         {isMonitor && <ul>
                         <li ><SiVisualstudiocode size={28} color={"#2196f3"} /> Visual Studio Code</li>
                         <li ><DiGit size={30} /> Git</li>
@@ -63,7 +63,7 @@ export default function About() {
                     <SiArduino size={30} color={"#40e0d0"}/></div>}
             </Card>
             <Card elevation={3} sx={{ height: 'auto', width: 270, p: 2, mt:2, display: "flex-grow", }}>
-                <Typography  variant="body1" > I am familiar with these platforms and languages</Typography>
+                <Typography  variant="body1" > I am familiar with these platforms and languages.</Typography>
                             {isMonitor && <ul>
                         <li><DiVisualstudio size={30} color={"#AB345A"} /> Visual Studio</li>
                         <li><SiMysql size={30} /> My SQL</li>

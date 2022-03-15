@@ -10,7 +10,6 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import { useMediaQuery } from 'react-responsive';
 import { List, ListItem } from "@mui/material";
 import ListItemIcon from '@mui/material/ListItemIcon';
-import { MdDoubleArrow } from 'react-icons/md';
 
 const useStyles = makeStyles((theme) => ({
     timelineRoot: {
@@ -89,10 +88,10 @@ export default function TimeLine() {
             </Timeline></div>}
             {isTabletOrMobile && <div className={classes.sectionTimeLineLeft}>
                 <List sx={{ color: "white",}} >
-                <ListItem> <ListItemIcon><MdDoubleArrow /></ListItemIcon>2021 - 2022 Chief Technical Officer - ARRQ</ListItem>
-                <ListItem><ListItemIcon><MdDoubleArrow /></ListItemIcon>2020 - 2021 System Engineer - NEC</ListItem>
-                <ListItem><ListItemIcon><MdDoubleArrow /></ListItemIcon>2016 - 2020  Bachelors in Information Technology </ListItem>
-                <ListItem><ListItemIcon><MdDoubleArrow /></ListItemIcon>2010 - 2016 Light Vehicle Mechanic</ListItem>
+                <ListItem> <ListItemIcon><TimelineDot /></ListItemIcon>2021 - 2022 Chief Technical Officer - ARRQ</ListItem>
+                <ListItem><ListItemIcon><TimelineDot /></ListItemIcon>2020 - 2021 System Engineer - NEC</ListItem>
+                <ListItem><ListItemIcon><TimelineDot /></ListItemIcon>2016 - 2020  Bachelors in Information Technology </ListItem>
+                <ListItem><ListItemIcon><TimelineDot /></ListItemIcon>2010 - 2016 Light Vehicle Mechanic</ListItem>
             </List>
             </div>}
         </div>

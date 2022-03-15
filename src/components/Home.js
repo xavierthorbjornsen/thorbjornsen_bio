@@ -44,7 +44,7 @@ export default function Home() {
                         id="Experience"
                     ></Section>
                     <Section
-                        title="Timeline History"
+                        title="My Timeline"
                         subtitle={<Timeline />}
                         dark={3}
                         id="TimeLine"

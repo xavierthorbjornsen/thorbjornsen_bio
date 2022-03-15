@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles";
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
+import { useMediaQuery } from 'react-responsive';
 
 
 
@@ -63,14 +64,17 @@ export default function Contact() {
     };
     const classes = useStyles();
 
+    const isMonitor = useMediaQuery({ query: '(min-width: 1042px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1043px)' })
+
     return (
         <div className={classes.sectionContact}>
-            <Card sx={{ width: 300, opacity:0.8, p:2}}>
+            {isMonitor && <Card sx={{  width: "40vw", height:'40vh', opacity:0.8, p:2}}>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className={classes.contactForm}>
                     <Stack
                         sx={{
-                            width: '35ch',
+                            width: '100%',
                         }}
 
                         spacing={2}
@@ -121,8 +125,64 @@ export default function Contact() {
                 </div>
             </form>
             {alert ? <Alert sx={{ mt: 2}} severity="success">Email sent. Thank you for reaching out</Alert> : <></>}
-            </Card>
-           
+            </Card>}
+            {isTabletOrMobile && <Card sx={{ width: "90vw", height:'90vh', p:2}}>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <div className={classes.contactForm}>
+                    <Stack
+                        sx={{
+                            width: '100%',
+                        }}
+
+                        spacing={2}
+                    >
+                        <Controller
+                            name="firstName"
+                            control={control}
+                            render={({ field }) => <TextField
+                                {...field}
+                                type="input"
+                                id="firstname"
+                                value={firstname}
+                                label="Name"
+                                required
+                                onChange={(e => setName(e.target.value))}
+                            />}
+                        />
+                        <Controller
+                            name="firstName"
+                            control={control}
+                            render={({ field }) => <TextField 
+                                {...field}
+                                type="input"
+                                id="email"
+                                required
+                                value={email}
+                                label="Email"
+                                onChange={(e => setEmail(e.target.value))}
+                            />}
+                        />
+                        <Controller
+                            name="firstName"
+                            control={control}
+                            render={({ field }) => <TextField 
+                                {...field}
+                                type="input"
+                                id="message"
+                                label="Message"
+                                multiline
+                                rows={4}
+                                required
+                                value={message}
+                                onChange={(e => setMessage(e.target.value))}
+                            />}
+                        />
+                        <Button type="submit" variant="outlined">{status}</Button>
+                    </Stack>
+                </div>
+            </form>
+            {alert ? <Alert sx={{ mt: 2}} severity="success">Email sent. Thank you for reaching out</Alert> : <></>}
+            </Card>}
 
         </div>
     )

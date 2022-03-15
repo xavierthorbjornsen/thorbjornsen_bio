@@ -22,8 +22,8 @@ const Experience = () => {
     let url = "https://github.com/Xbjornsen/DroneFlight/blob/main/take_off_and_land.py";
     const classes = useStyles();
 
-    const isMonitor = useMediaQuery({ query: '(min-width: 1433px)' })
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1432px)' })
+    const isMonitor = useMediaQuery({ query: '(min-width: 1042px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1043px)' })
     return (
         <div className={classes.sectionExperience}>
             {isMonitor && <Stack spacing={2}>
@@ -35,7 +35,7 @@ const Experience = () => {
                 <Card sx={{ height:200, }}>
                     <Typography variant="h4" sx={{ paddingLeft: 2, }}>NEC </Typography>
                     <Typography variant="h5"  sx={{paddingLeft: 2, }}>Systems Engineer <br /></Typography>
-                    <Typography variant="body1" sx={{paddingLeft: 2,  }}>Build applications and updating existing repositories using DotNet/SQL/WPF, and react</Typography>
+                    <Typography variant="body1" sx={{paddingLeft: 2,  }}>Build applications and updating existing repositories using DotNet/SQL/WPF, and react.</Typography>
                 </Card>
                 <Card sx={{ height:200, }}>
                     <Typography variant="h4" sx={{ paddingLeft: 2,  }}>Territory Generation</Typography>
