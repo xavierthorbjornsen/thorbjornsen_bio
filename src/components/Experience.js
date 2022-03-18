@@ -51,7 +51,7 @@ const Experience = () => {
                 <Card sx={{ height:150, }}>
                     <Typography variant="h5" sx={{ paddingLeft: 2, }}>NEC </Typography>
                     <Typography variant="h6"  sx={{paddingLeft: 2, }}>Systems Engineer <br /></Typography>
-                    <Typography variant="body1" sx={{paddingLeft: 2,  }}>Build applications and updating existing repositories using DotNet/SQL/WPF, and react</Typography>
+                    <Typography variant="body1" sx={{paddingLeft: 2,  }}>Build applications and updating existing repositories using .Net/SQL/WPF, and React.js</Typography>
                 </Card>
                 <Card sx={{ height:150, }}>
                     <Typography variant="h5" sx={{ paddingLeft: 2,  }}>Territory Generation</Typography>

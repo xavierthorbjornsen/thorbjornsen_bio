@@ -48,28 +48,23 @@ export default function About() {
             <Card elevation={3} sx={{ height: 'auto',  width: 270, p: 2, mt:2, display: "flex-grow", }}>
                 <Typography variant="body1" >I have used these plaforms for various projects.</Typography>
                         {isMonitor && <ul>
-                        <li ><SiVisualstudiocode size={28} color={"#2196f3"} /> Visual Studio Code</li>
+                        <li ><SiVisualstudiocode size={26} color={"#2196f3"} /> Visual Studio Code</li>
                         <li ><DiGit size={30} /> Git</li>
                         <li ><DiGithubBadge size={30} /> Github</li>
                         <li ><DiRasberryPi size={30} color={"Darkred"}/> RaspberryPi</li>
                         <li ><DiFirebase size={30} color={"#ff9800"}/> FireBase </li>
                         <li ><SiArduino size={30} color={"#40e0d0"}/>Arduino </li>
+                        <li><DiVisualstudio size={30} color={"#AB345A"} /> Visual Studio</li>
+                        <li><SiMysql size={30} /> My SQL</li>
                     </ul>}
                     {isTabletOrMobile && <div><SiVisualstudiocode size={28} color={"#2196f3"} /> 
                     <DiGit size={30} />
                     <DiGithubBadge size={30} />
                     <DiRasberryPi size={30} color={"Darkred"}/>
                     <DiFirebase size={30} color={"#ff9800"}/>
-                    <SiArduino size={30} color={"#40e0d0"}/></div>}
-            </Card>
-            <Card elevation={3} sx={{ height: 'auto', width: 270, p: 2, mt:2, display: "flex-grow", }}>
-                <Typography  variant="body1" > I am familiar with these platforms and languages.</Typography>
-                            {isMonitor && <ul>
-                        <li><DiVisualstudio size={30} color={"#AB345A"} /> Visual Studio</li>
-                        <li><SiMysql size={30} /> My SQL</li>
-                    </ul>}
-                    {isTabletOrMobile && <div><DiVisualstudio size={30} color={"#AB345A"} /><SiMysql size={30} /></div>}
-                
+                    <SiArduino size={30} color={"#40e0d0"}/>
+                    <DiVisualstudio size={30} color={"#AB345A"} />
+                    <SiMysql size={30} /></div>}
             </Card>
         </div>
     )
