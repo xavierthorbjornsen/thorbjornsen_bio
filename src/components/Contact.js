@@ -72,7 +72,7 @@ export default function Contact() {
         setAlert(true);
         setTimeout(() => {
             setAlert(false);
-        }, 2000)
+        }, 10000)
     };
     const classes = useStyles();
 
@@ -81,7 +81,7 @@ export default function Contact() {
 
     return (
         <div className={classes.sectionContact}>
-            {isMonitor && <Card sx={{ width: "40vw", height: '32vh', minHeight:380, opacity: 0.8, p: 2 }}>
+            {isMonitor && <Card sx={{ width: "40vw", height: '32vh', minHeight:400, opacity: 0.8, p: 2 }}>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className={classes.contactForm}>
                         <Stack
@@ -144,7 +144,7 @@ export default function Contact() {
                 </form>
                 {alert ? <Alert sx={{ mt: 2 }} severity="success">Email sent. Thank you for reaching out</Alert> : <></>}
             </Card>}
-            {isTabletOrMobile && <Card sx={{ width: "90vw", height: '32vh', minHeight:380, p: 2 }}>
+            {isTabletOrMobile && <Card sx={{ width: "90vw", height: '38vh', minHeight:436, minWidth:300, p: 2 }}>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className={classes.contactForm}>
                         <Stack
