@@ -32,9 +32,9 @@ exports.emailMessage = functions.https.onRequest(async(req, res) => {
         const mailOptions = {
             to: gmailEmail,
             from: req.body.email,
-            subject: `from my website ${req.body.email}`,
+            subject: `from my website `,
             text: req.body.message,
-            html: `<p>${req.body.message}</p>`
+            html: `<p> Name: ${req.body.name} </br> From: ${req.body.email}</br>${req.body.message}</p>`
         };
 
         try {
