@@ -39,7 +39,7 @@ const Experience = () => {
                     <Card sx={{ height: 200, pt:2, pl:2,}}>
                         <Typography variant="h4" >NEC </Typography>
                         <Typography variant="h5">Systems Engineer <br /></Typography>
-                        <Typography variant="body1" >Build applications and updating existing repositories using .Net/SQL/WPF, and react.</Typography>
+                        <Typography variant="body1" >Build applications and update existing repositories using .Net/SQL/WPF, and react.</Typography>
                     </Card>
                     <Card sx={{ height: 200, pt:2, pl:2,}}>
                         <Typography variant="h4" >Territory Generation</Typography>
